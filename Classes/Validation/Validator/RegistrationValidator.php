@@ -79,7 +79,7 @@ class RegistrationValidator extends \TYPO3\CMS\Extbase\Validation\Validator\Abst
         $spamSettings = $settings['registration']['spamCheck'] ?? [];
         if ((bool)$spamSettings['enabled'] && $this->isSpamCheckFailed($value, $spamSettings)) {
             $message = $this->translateErrorMessage('registration.spamCheckFailed', 'SfEventMgt');
-            $error = new Error($message, 1578855253965);
+            $error = new Error($message, 1578855253);
             $this->result->forProperty('spamCheck')->addError($error);
 
             return false;
